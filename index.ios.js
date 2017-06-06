@@ -11,18 +11,9 @@ import {
   Text,
   View
 } from 'react-native';
-import App from './src/welcome'
-export default class RelaxationStation extends Component {
-  render() {
-    return (
-      <App
-        title="Relaxation Station"
-        quote="A land of no worries"
-      />
-    );  
-  }
-}
 
 
+import Quotes from './src/app'
 
-AppRegistry.registerComponent('RelaxationStation', () => RelaxationStation);
+
+AppRegistry.registerComponent('RelaxationStation', () => Quotes);

@@ -25,17 +25,14 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ({title, quote}) => {
+export default ({quote, writer}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.welcome}>
         Welcome to! { title }
       </Text>
       <Text style={styles.instructions}>
-        To get started, edit index.ios.js
-      </Text>
-      <Text style={styles.instructions}>
-        - { quote }
+        - { writer }
       </Text>
     </View>
   )
