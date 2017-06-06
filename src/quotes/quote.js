@@ -8,27 +8,30 @@ import {
 const styles = StyleSheet.create({
   welcome: {
     backgroundColor: 'transparent',
-    fontSize: 40,
-    textAlign: 'center',
+    fontSize: 25,
+    fontFamily: 'Academy Engraved LET',
+    textAlign: 'left',
     margin: 10,
-    color: '#fff'
+    color: '#ffffff'
   },
   instructions: {
     backgroundColor: 'transparent',
-    textAlign: 'center',
-    color: '#fff',
+    textAlign: 'right',
+    fontStyle: 'italic',
+    color: '#ffffff',
     marginBottom: 5,
   },
 });
 
-export default ({quote, writer}) => {
+export default ({quote}) => {
   return (
     <View >
-      <Text style={styles.welcome}>
-          " { quote } "
+      <Text 
+        style={styles.welcome}>
+          {"\" "+quote.quote+"\" "}
       </Text>
       <Text style={styles.instructions}>
-        - { writer }
+        - { quote.writer }
       </Text>
     </View>
   )

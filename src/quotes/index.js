@@ -39,7 +39,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    color: '#fff',
     backgroundColor: '#04233c',
   },
   welcome: {
@@ -49,7 +48,7 @@ const styles = StyleSheet.create({
   },
   instructions: {
     textAlign: 'center',
-    color: '#fff',
+    color: '#ffffff',
     marginBottom: 5,
   },
 });

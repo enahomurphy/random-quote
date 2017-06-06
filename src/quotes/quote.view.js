@@ -5,29 +5,58 @@ import {
   Image,
   TouchableOpacity,
   StyleSheet,
-  Button
+  Button,
+  LayoutAnimation
 } from 'react-native';
 
 import QuoteView from '../quotes/quote';
+import AllQuotes from '../data/quotes';
 
 class Quotes extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      currentQuote: 0,
+    }
+  }
+
+  componentWillUpdate(){
+    LayoutAnimation.easeInEaseOut()
+  }
+
   static navigationOptions = {
     header: null,
     title: 'Welcome',
   }
+
+  next() {
+    if (!AllQuotes[this.state.currentQuote + 1]) {
+        this.setState({
+          currentQuote: 0
+        })
+    } else {
+      this.setState({
+        currentQuote: this.state.currentQuote+ 1
+      })
+    }
+   
+  }
+
+
   render() {
+    console.log(this.state)
     return (
-      <Image  
+      <Image key={this.state.currentQuote.id}  
         source={require('../assets/bg.png')}
         style={styles.image}
         >
-        <View style={styles.container}>
+        <View style={styles.container} >
           <View style={styles.quoteView}>
-            <QuoteView 
-            title= "This great king"
+            <QuoteView  
+              quote={AllQuotes[this.state.currentQuote]}
            />
           </View>
-          < TouchableOpacity style={styles.next}> 
+          < TouchableOpacity style={styles.next} onPress={() => this.next()}> 
             <Text style={styles.nestText}>Next</Text> 
           </TouchableOpacity > 
         </View>
@@ -57,7 +86,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     backgroundColor: 'transparent',
     borderWidth: 2,
-    borderColor: '#fff',
+    borderColor: 'rgb(255, 255, 255)',
     borderRadius: 5,
     marginBottom: 20
   },
@@ -67,7 +96,7 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     paddingLeft: 40,
     paddingRight: 40,
-    color: '#fff'
+    color: '#ffffff'
   }
 });
 

@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   },
   logoTitle: {
     fontSize: 20,
-    color: '#fff'
+    color: 'rgb(255, 255, 255)'
   },
   container: {
     width: 200,
