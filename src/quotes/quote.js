@@ -6,30 +6,26 @@ import {
 } from 'react-native';
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
   welcome: {
-    fontSize: 20,
+    backgroundColor: 'transparent',
+    fontSize: 40,
     textAlign: 'center',
     margin: 10,
+    color: '#fff'
   },
   instructions: {
+    backgroundColor: 'transparent',
     textAlign: 'center',
-    color: '#333333',
+    color: '#fff',
     marginBottom: 5,
   },
 });
 
 export default ({quote, writer}) => {
   return (
-    <View style={styles.container}>
+    <View >
       <Text style={styles.welcome}>
-        Welcome to! { title }
+          " { quote } "
       </Text>
       <Text style={styles.instructions}>
         - { writer }

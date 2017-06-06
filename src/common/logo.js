@@ -28,10 +28,10 @@ const styles = StyleSheet.create({
   }
 });
 
-export default ({tagline}) => {
+export default ({tagline, navigate}) => {
   const { container, logo, logoTitle, tagStyle } = styles;
   return (
-    <TouchableOpacity style={container}>
+    <TouchableOpacity style={container} onPress={() => navigate('Quotes')}>
       <Text
         style={logoTitle}>
         The quotes</Text>

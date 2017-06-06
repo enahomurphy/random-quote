@@ -23,7 +23,7 @@ class Quotes extends React.Component {
     return (
       <View style={styles.container}>
         <TouchableOpacity onPress={() => navigate('Quotes')} >
-          <Logo /> 
+          <Logo navigate={navigate}/> 
           <Text style={styles.instructions}>
             - click to view quotes
           </Text>
