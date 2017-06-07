@@ -44,7 +44,6 @@ class Quotes extends React.Component {
 
 
   render() {
-    console.log(this.state)
     return (
       <Image key={this.state.currentQuote.id}  
         source={require('../assets/bg.png')}
